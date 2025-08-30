@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shining Ring</title>
+	<style>
+		body{
+			margin: 0;
+			background-color: black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.ring{
+			width: 150px;
+			height: 150px;
+			border: 8px solid rgba(255, 255, 255, 0.2);
+			border-top: 8px solid white;
+			border-radius: 50%;
+			animation: spin 1s linear infinite,
+			glow 2s ease-in-out infinite alternate;
+		}
+		@keyframes spin{
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);}
+		}
+		@keyframes glow{
+			0%{
+				box-shadow: 0 0 10px white;
+			}
+			100%{
+				box-shadow: 0 0 30px white;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="ring"></div>
+</body>
+</html>
